@@ -106,6 +106,10 @@ const (
 	// marked userConfigurable and already present in either OVF Properties of a VirtualMachineImage
 	// or as vApp properties on an existing VM or VMTX will be set, all others will be ignored.
 	VirtualMachineMetadataOvfEnvTransport VirtualMachineMetadataTransport = "OvfEnv"
+
+	// VirtualMachineMetadataCloudInitPrepTransport will set the VirtualMachineMetadata ConfigMap data as
+	// cloud-init userdata.
+	VirtualMachineMetadataCloudInitPrepTransport VirtualMachineMetadataTransport = "CloudInitPrep"
 )
 
 // VirtualMachineMetadata defines any metadata that should be passed to the VirtualMachine instance.  A typical use
